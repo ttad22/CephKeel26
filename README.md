@@ -15,10 +15,9 @@ cloud) without any changes to the Ceph source tree.
 | loss_1pct (1% packet loss) | 367 ms | 21 ms | **94%** |
 | osd_restart | 217 ms | 20 ms | **91%** |
 | jitter_50 (20±50 ms) | 1053 ms | 882 ms | 16% |
-| no_fault (ambient OCI noise) | 28 ms | 20 ms | 29% |
+| no_fault (baseline) | 28 ms | 20 ms | 29% |
 
-OSD flap rate: baseline triggers 1 flap/run on all OCI scenarios (including
-`no_fault`); CephKeel reduces this to 0 on all non-link-down scenarios.
+OSD flap rate: baseline triggers ≥1 flap/run on stochastic impairment scenarios; CephKeel reduces this to 0 on all non-link-down scenarios.
 
 ## How It Works
 
@@ -34,107 +33,112 @@ OSD flap rate: baseline triggers 1 flap/run on all OCI scenarios (including
 └─────────────────┘
 ```
 
-**v2 improvements** (this release):
-- **Multi-probe**: ping multiple targets, majority-vote prevents false positives
-- **Hysteresis**: require N consecutive bad/good readings before flipping (configurable)
-- **Dead-man's switch**: Ceph command failures are logged but never crash the controller
+Hysteresis: requires 2 consecutive bad readings to enter degraded mode,
+3 consecutive good readings to exit. Prevents oscillation near thresholds.
 
 ## Repository Layout
 
 ```
-CephKeel/
-├── cephkeel_controller.py   # Adaptive controller (~470 lines, no dependencies)
-├── paper/
-│   └── cephkeel_paper.tex   # IEEE-format research paper (LaTeX)
-├── plots/
-│   ├── flap_count.png       # OSD flap reduction chart
-│   ├── client_p99_ms.png    # p99 latency comparison
-│   ├── client_p999_ms.png   # p99.9 latency comparison
-│   └── peering_time_s.png   # Peering time improvement
-├── summary.csv              # Aggregated experiment statistics
-├── notebooks/
-│   └── process_results.ipynb  # Jupyter notebook for result processing
+CephKeel26/
+├── cephkeel_controller.py   # Controller (~470 lines, stdlib only)
 ├── scripts/
-│   ├── run_experiment.sh    # Fault-injection harness (tc netem / ip link)
-│   ├── run_matrix.sh        # Batch experiment runner
-│   └── collect_metrics.sh   # Continuous metric collector
+│   ├── run_experiment.sh    # Single fault-injection run (tc netem / ip link)
+│   ├── run_matrix.sh        # Full baseline × adaptive matrix runner
+│   ├── collect_metrics.sh   # Continuous Ceph status collector
+│   └── balanced_stats.py    # Bootstrap CI computation
+├── sim/
+│   ├── sim_engine.py        # Large-scale simulator (100 DC, no hardware needed)
+│   ├── sim_report.py        # Print summary from results JSON
+│   └── results_100dc_parallel.json  # Pre-computed results from the paper
+├── workload/
+│   └── fio_job.fio          # fio workload (128 KB, 70/30 R/W, 4 jobs, 300 s)
 ├── systemd/
-│   └── cephkeel.service     # Systemd unit file
-└── workload/
-    └── fio_job.fio          # Standard fio workload (128K 70/30 R/W, 4 jobs)
+│   └── cephkeel.service     # Systemd unit
+├── paper/
+│   ├── main.tex             # LaTeX source (IEEE IEEEtran conference)
+│   ├── References.bib       # BibTeX database
+│   └── fig/
+│       └── fig_architecture.pdf  # Pre-compiled architecture figure
+└── summary.csv              # Aggregated experiment statistics
 ```
 
 ## Quick Start
 
-```bash
-# 1. Install dependencies
-sudo apt install -y python3 iproute2 sysstat fio
+**Requirements:** Linux, Python 3.8+, MicroCeph or full Ceph (Squid/Reef), `fio`, `iproute2`
 
-# 2. Deploy controller
+```bash
+# 1. Deploy the controller
 sudo cp cephkeel_controller.py /usr/local/bin/cephkeel_controller.py
-sudo chmod +x /usr/local/bin/cephkeel_controller.py
 sudo cp systemd/cephkeel.service /etc/systemd/system/
 sudo systemctl daemon-reload && sudo systemctl enable --now cephkeel.service
 
-# 3. Configure probe targets (optional — defaults to <your-osd-node-ip>)
-export CEPHKEEL_PING_TARGETS="10.x.x.osd1,10.x.x.osd2"
+# 2. Set probe targets (IPs of your OSD nodes)
+export CEPHKEEL_PING_TARGETS="10.0.0.1,10.0.0.2,10.0.0.3"
 
-# 4. Run a single experiment (adaptive mode)
-MODE=adaptive INTERFACE=ens3 ./scripts/run_experiment.sh loss_1pct 300 workload/fio_job.fio
+# 3. Run a single experiment
+MODE=adaptive INTERFACE=eth0 ./scripts/run_experiment.sh loss_1pct 300 workload/fio_job.fio
 
-# 5. Run the full matrix (baseline + adaptive, 3 reps each)
-MODES=baseline,adaptive INTERFACE=ens3 ./scripts/run_matrix.sh 3 300 workload/fio_job.fio \
+# 4. Run the full matrix (baseline + adaptive, 5 reps each)
+MODES=baseline,adaptive INTERFACE=eth0 ./scripts/run_matrix.sh 5 300 workload/fio_job.fio \
   no_fault bw_200m loss_1pct jitter_50 osd_restart link_down
 ```
 
-## Configuration Reference
+## Reproduce Without Hardware (Simulation)
 
-All settings are via environment variables — no script edits needed.
+The simulator runs the unmodified controller against mocked ping/ceph binaries —
+no Ceph cluster needed.
+
+```bash
+# Run 10 DCs × 6 scenarios (~2 min)
+python3 sim/sim_engine.py --dcs 10 --osds 8 --scenario mixed --output results.json
+
+# Print summary
+python3 sim/sim_report.py results.json
+
+# Reproduce the paper's 100-DC run (pre-computed results also in repo)
+python3 sim/sim_engine.py --dcs 100 --osds 8 --duration 600 --scenario mixed \
+  --workers 8 --output results_100dc.json
+```
+
+## Configuration
+
+All settings via environment variables — no edits to the script needed.
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `CEPHKEEL_PING_TARGETS` | `<your-osd-node-ip>` | Comma-separated probe IPs |
-| `CEPHKEEL_PING_TARGET` | `<your-osd-node-ip>` | Single probe target (legacy) |
-| `CEPHKEEL_HYSTERESIS_BAD` | `2` | Consecutive bad readings before degraded mode |
-| `CEPHKEEL_HYSTERESIS_GOOD` | `3` | Consecutive good readings before healthy mode |
+| `CEPHKEEL_PING_TARGETS` | `192.0.2.1` | Comma-separated probe IPs |
+| `CEPHKEEL_HYSTERESIS_BAD` | `2` | Consecutive bad readings → degraded |
+| `CEPHKEEL_HYSTERESIS_GOOD` | `3` | Consecutive good readings → healthy |
 | `CEPHKEEL_CFG_ENTITY` | `osd` | Ceph config entity (`osd` or `global`) |
-| `CEPHKEEL_BASELINE_PATH` | `/var/lib/cephkeel/baseline.json` | Baseline persistence path |
-| `CEPHKEEL_REFRESH_BASELINE` | `0` | Set to `1` to force baseline recapture |
-| `INTERFACE` | `vmbr0.30` | NIC for tc fault injection |
-| `OSD_ID` | `0` | OSD for `osd_restart` scenario |
-| `STATUS_INTERVAL` | `5` | Ceph status polling interval (s) |
-| `MODE` | *(empty)* | Run label (`baseline` or `adaptive`) |
+| `CEPHKEEL_BASELINE_PATH` | `/var/lib/cephkeel/baseline.json` | Baseline save path |
+| `INTERFACE` | `eth0` | NIC for tc fault injection |
+| `OSD_ID` | `0` | OSD index for `osd_restart` scenario |
 
-## Evaluated Fault-Injection Scenarios
+## Fault-Injection Scenarios
 
-| Scenario | Impairment | Severity |
-|----------|-----------|----------|
-| `no_fault` | None | Steady-state baseline |
-| `bw_200m` | 200 Mbps cap (`tc tbf`) | Low |
-| `loss_1pct` | 1% random packet loss (`tc netem`) | Medium |
-| `jitter_50` | 20 ± 50 ms delay, normal dist | Medium |
-| `osd_restart` | Restart one OSD process | High |
-| `link_down` | Bring interface down (`ip link`) | Extreme |
+| Scenario | Impairment | Tool |
+|----------|-----------|------|
+| `no_fault` | None | — |
+| `bw_200m` | 200 Mbps cap | `tc tbf` |
+| `loss_1pct` | 1% random packet loss | `tc netem` |
+| `jitter_50` | 20 ± 50 ms delay (normal) | `tc netem` |
+| `osd_restart` | Restart one OSD process | `systemctl` |
+| `link_down` | Interface down for full run | `ip link` |
 
-## Testbeds
+## Testbeds Used in the Paper
 
-| Testbed | Hardware | OS | Ceph |
-|---------|----------|----|------|
-| Proxmox (on-prem) | 3× Xeon E5-2680v4, 128–161 GB RAM | Debian/PVE | MicroCeph Squid 19.2.3 |
-| OCI (cloud) | 2× E2.1.Micro (EPYC 7551, 1 GB RAM) | Ubuntu 22.04 | MicroCeph Squid 19.2.3 |
+| Testbed | Nodes | OS | Ceph |
+|---------|-------|----|------|
+| On-premises (Proxmox) | 3× heterogeneous x86 (1 GbE) | Debian/PVE 8 | MicroCeph Squid 19.2.3 |
+| Oracle Cloud (OCI) | 3× VM.Standard.E2.1 (8 GB) | Ubuntu 22.04 | MicroCeph Squid 19.2.3 |
 
-## Paper
+## Compile the Paper
 
-The full IEEE-format research paper is in `paper/cephkeel_paper.tex`.
-Compile with:
 ```bash
-pdflatex paper/cephkeel_paper.tex && bibtex cephkeel_paper && pdflatex paper/cephkeel_paper.tex
+cd paper
+pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
 ```
 
 ## License
 
-MIT — see `LICENSE`.
-
-## References
-
-See `REFERENCES.md` for all cited works.
+MIT
