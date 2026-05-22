@@ -1,0 +1,2465 @@
+{
+  "scenario": "mixed",
+  "n_dcs": 100,
+  "n_osds_per_dc": 16,
+  "total_nodes": 1600,
+  "duration_s": 60,
+  "elapsed_s": 60.92,
+  "sim_speedup": 0.98,
+  "dcs_reported": 100,
+  "total_ceph_events": 241,
+  "total_mode_switches": 61,
+  "mean_switches_per_dc": 0.61,
+  "stdev_switches": 0.49,
+  "scenario_steps": 800,
+  "dc_results": [
+    {
+      "dc_id": 0,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761902.2209227,
+          "dc": 0,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761902.2730248,
+          "dc": 0,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761902.3557885,
+          "dc": 0,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761902.7896407,
+          "dc": 0,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 1,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 2,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761899.3284788,
+          "dc": 2,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761899.4711258,
+          "dc": 2,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761899.520908,
+          "dc": 2,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761899.5794692,
+          "dc": 2,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 3,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761898.2222052,
+          "dc": 3,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761898.256756,
+          "dc": 3,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761898.311894,
+          "dc": 3,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761898.5707798,
+          "dc": 3,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 4,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761906.2936196,
+          "dc": 4,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761906.674907,
+          "dc": 4,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761906.7581632,
+          "dc": 4,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761906.8166945,
+          "dc": 4,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 5,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 6,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 7,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761905.9279625,
+          "dc": 7,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761905.9660578,
+          "dc": 7,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761906.0247526,
+          "dc": 7,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761906.108046,
+          "dc": 7,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 8,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761914.4556549,
+          "dc": 8,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761915.0372102,
+          "dc": 8,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761915.5286574,
+          "dc": 8,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761915.5961754,
+          "dc": 8,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 9,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761903.8175948,
+          "dc": 9,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761903.8647492,
+          "dc": 9,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761903.9149787,
+          "dc": 9,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761903.964773,
+          "dc": 9,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 10,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761898.1868234,
+          "dc": 10,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761898.228114,
+          "dc": 10,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761898.2783687,
+          "dc": 10,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761898.3451169,
+          "dc": 10,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 11,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761915.8738313,
+          "dc": 11,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761916.0621555,
+          "dc": 11,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761916.1123898,
+          "dc": 11,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761916.1705627,
+          "dc": 11,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 12,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761914.31414,
+          "dc": 12,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761914.3534646,
+          "dc": 12,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761914.4129083,
+          "dc": 12,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761915.0368903,
+          "dc": 12,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 13,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 14,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761912.8505278,
+          "dc": 14,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761913.2865305,
+          "dc": 14,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761913.352723,
+          "dc": 14,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761913.402973,
+          "dc": 14,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 15,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 16,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761902.1595879,
+          "dc": 16,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761902.2725828,
+          "dc": 16,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761902.355772,
+          "dc": 16,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761902.789706,
+          "dc": 16,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 17,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761898.108774,
+          "dc": 17,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761898.1536102,
+          "dc": 17,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761898.2032676,
+          "dc": 17,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761898.2534342,
+          "dc": 17,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 18,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 19,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761903.7355754,
+          "dc": 19,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761903.766737,
+          "dc": 19,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761903.864799,
+          "dc": 19,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761903.914941,
+          "dc": 19,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 20,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 21,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761904.8636305,
+          "dc": 21,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761904.9823778,
+          "dc": 21,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761905.0320258,
+          "dc": 21,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761905.0817978,
+          "dc": 21,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 22,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761901.6629732,
+          "dc": 22,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761901.8889227,
+          "dc": 22,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761902.2443523,
+          "dc": 22,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761902.3309445,
+          "dc": 22,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 23,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761906.5740085,
+          "dc": 23,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761906.6749418,
+          "dc": 23,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761906.7582078,
+          "dc": 23,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761906.8175488,
+          "dc": 23,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 24,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 25,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761904.9602163,
+          "dc": 25,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761905.0071967,
+          "dc": 25,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761905.0569923,
+          "dc": 25,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761905.1071422,
+          "dc": 25,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 26,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 27,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 28,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761899.3486564,
+          "dc": 28,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761899.4710958,
+          "dc": 28,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761899.5206711,
+          "dc": 28,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761899.5793204,
+          "dc": 28,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 29,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 30,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 31,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 32,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761899.8658206,
+          "dc": 32,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761900.2381346,
+          "dc": 32,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761900.2879677,
+          "dc": 32,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761900.3381655,
+          "dc": 32,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 33,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761898.3696003,
+          "dc": 33,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761898.6037147,
+          "dc": 33,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761898.6705103,
+          "dc": 33,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761898.7204633,
+          "dc": 33,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 34,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761904.1159158,
+          "dc": 34,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761904.340204,
+          "dc": 34,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761904.39023,
+          "dc": 34,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761904.4400253,
+          "dc": 34,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 35,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761904.0159323,
+          "dc": 35,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761904.3400548,
+          "dc": 35,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761904.3901753,
+          "dc": 35,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761904.4400532,
+          "dc": 35,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 36,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 37,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761905.0812855,
+          "dc": 37,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761905.1319823,
+          "dc": 37,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761905.1904798,
+          "dc": 37,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761905.2405283,
+          "dc": 37,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 38,
+      "n_osds": 16,
+      "events": 1,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761921.6052718,
+          "dc": 38,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        }
+      ]
+    },
+    {
+      "dc_id": 39,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761899.1225982,
+          "dc": 39,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761899.4456449,
+          "dc": 39,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761899.4961524,
+          "dc": 39,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761899.545913,
+          "dc": 39,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 40,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761903.453526,
+          "dc": 40,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761903.5076132,
+          "dc": 40,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761903.5732052,
+          "dc": 40,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761903.6395657,
+          "dc": 40,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 41,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761903.145473,
+          "dc": 41,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761903.4729486,
+          "dc": 41,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761903.5315528,
+          "dc": 41,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761903.5980434,
+          "dc": 41,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 42,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 43,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761903.2835011,
+          "dc": 43,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761903.506144,
+          "dc": 43,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761903.573248,
+          "dc": 43,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761903.6395423,
+          "dc": 43,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 44,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761909.3676667,
+          "dc": 44,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761909.7180636,
+          "dc": 44,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761909.775872,
+          "dc": 44,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761910.1429126,
+          "dc": 44,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 45,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761907.4558825,
+          "dc": 45,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761907.5000436,
+          "dc": 45,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761907.5499637,
+          "dc": 45,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761907.600333,
+          "dc": 45,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 46,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761903.2119243,
+          "dc": 46,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761903.5063958,
+          "dc": 46,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761903.5732913,
+          "dc": 46,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761903.6395085,
+          "dc": 46,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 47,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761905.825921,
+          "dc": 47,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761905.86587,
+          "dc": 47,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761905.8955522,
+          "dc": 47,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761905.9407165,
+          "dc": 47,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 48,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761911.436157,
+          "dc": 48,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761911.4682903,
+          "dc": 48,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761911.5201893,
+          "dc": 48,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761911.5682929,
+          "dc": 48,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 49,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 50,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 51,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 52,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761914.4167488,
+          "dc": 52,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761915.0365002,
+          "dc": 52,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761915.5285573,
+          "dc": 52,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761915.5952356,
+          "dc": 52,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 53,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 54,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761893.2779994,
+          "dc": 54,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761893.619199,
+          "dc": 54,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761893.6968231,
+          "dc": 54,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761894.2604353,
+          "dc": 54,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 55,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761904.7909446,
+          "dc": 55,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761904.9817872,
+          "dc": 55,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761905.0321743,
+          "dc": 55,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761905.0821207,
+          "dc": 55,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 56,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761903.8343928,
+          "dc": 56,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761903.866142,
+          "dc": 56,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761903.9148548,
+          "dc": 56,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761903.9645965,
+          "dc": 56,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 57,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 58,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 59,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 60,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 61,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 62,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 63,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 64,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761906.013361,
+          "dc": 64,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761906.0577974,
+          "dc": 64,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761906.1329398,
+          "dc": 64,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761906.1912007,
+          "dc": 64,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 65,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761900.468962,
+          "dc": 65,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761900.5133018,
+          "dc": 65,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761900.5635586,
+          "dc": 65,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761900.6134052,
+          "dc": 65,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 66,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 67,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761937.0309036,
+          "dc": 67,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761937.3973496,
+          "dc": 67,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761937.4891453,
+          "dc": 67,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761937.5471876,
+          "dc": 67,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 68,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761901.4373767,
+          "dc": 68,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761901.5065262,
+          "dc": 68,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761901.8886483,
+          "dc": 68,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761902.2443326,
+          "dc": 68,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 69,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761910.42539,
+          "dc": 69,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761910.734816,
+          "dc": 69,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761910.9433296,
+          "dc": 69,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761910.9931188,
+          "dc": 69,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 70,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 71,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 72,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 73,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761898.3605564,
+          "dc": 73,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761898.6037834,
+          "dc": 73,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761898.6705973,
+          "dc": 73,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761898.7202647,
+          "dc": 73,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 74,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 75,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 76,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 77,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761891.7638078,
+          "dc": 77,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761892.0176907,
+          "dc": 77,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761892.2176545,
+          "dc": 77,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761892.2675426,
+          "dc": 77,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 78,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761916.5622792,
+          "dc": 78,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761916.8876095,
+          "dc": 78,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761916.96235,
+          "dc": 78,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761917.0151646,
+          "dc": 78,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 79,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761896.2942324,
+          "dc": 79,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761896.6781785,
+          "dc": 79,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761896.978484,
+          "dc": 79,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761897.2951088,
+          "dc": 79,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 80,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761906.0044436,
+          "dc": 80,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761906.0579064,
+          "dc": 80,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761906.1328838,
+          "dc": 80,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761906.1912942,
+          "dc": 80,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 81,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 82,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761899.270046,
+          "dc": 82,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761899.471085,
+          "dc": 82,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761899.521043,
+          "dc": 82,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761899.5793195,
+          "dc": 82,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 83,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761902.5547152,
+          "dc": 83,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761902.7905567,
+          "dc": 83,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761902.8562841,
+          "dc": 83,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761902.964242,
+          "dc": 83,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 84,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761902.3628912,
+          "dc": 84,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761902.7896094,
+          "dc": 84,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761902.8557236,
+          "dc": 84,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761902.964037,
+          "dc": 84,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 85,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761934.4195008,
+          "dc": 85,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761934.8959918,
+          "dc": 85,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761934.9541767,
+          "dc": 85,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761935.524443,
+          "dc": 85,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 86,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761904.033529,
+          "dc": 86,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761904.340022,
+          "dc": 86,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761904.3720043,
+          "dc": 86,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761904.4148264,
+          "dc": 86,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 87,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761896.9781685,
+          "dc": 87,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761897.2951605,
+          "dc": 87,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761897.3700593,
+          "dc": 87,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761897.4195292,
+          "dc": 87,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 88,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 89,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761903.9181955,
+          "dc": 89,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761903.964881,
+          "dc": 89,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761904.0150034,
+          "dc": 89,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761904.3400185,
+          "dc": 89,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 90,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761902.361074,
+          "dc": 90,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761902.789883,
+          "dc": 90,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761902.8561983,
+          "dc": 90,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761902.9643164,
+          "dc": 90,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 91,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 92,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761906.9584746,
+          "dc": 92,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761907.2417474,
+          "dc": 92,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761907.2999735,
+          "dc": 92,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761907.3501947,
+          "dc": 92,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 93,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 94,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761903.103298,
+          "dc": 94,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761903.1394506,
+          "dc": 94,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761903.4729712,
+          "dc": 94,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761903.5314744,
+          "dc": 94,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 95,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761930.217929,
+          "dc": 95,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761930.2770374,
+          "dc": 95,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761930.310176,
+          "dc": 95,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761930.376962,
+          "dc": 95,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 96,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 97,
+      "n_osds": 16,
+      "events": 0,
+      "mode_switches": 0,
+      "config_sets": []
+    },
+    {
+      "dc_id": 98,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761905.4909215,
+          "dc": 98,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761905.8162816,
+          "dc": 98,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761905.8658955,
+          "dc": 98,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761905.9159527,
+          "dc": 98,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "dc_id": 99,
+      "n_osds": 16,
+      "events": 4,
+      "mode_switches": 1,
+      "config_sets": [
+        {
+          "ts": 1775761904.5663369,
+          "dc": 99,
+          "action": "set",
+          "key": "osd_heartbeat_grace",
+          "value": "40"
+        },
+        {
+          "ts": 1775761904.6069553,
+          "dc": 99,
+          "action": "set",
+          "key": "osd_heartbeat_interval",
+          "value": "10"
+        },
+        {
+          "ts": 1775761904.94034,
+          "dc": 99,
+          "action": "set",
+          "key": "osd_max_backfills",
+          "value": "1"
+        },
+        {
+          "ts": 1775761905.0071707,
+          "dc": 99,
+          "action": "set",
+          "key": "osd_recovery_max_active",
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}
